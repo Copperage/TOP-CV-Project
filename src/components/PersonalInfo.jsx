@@ -1,39 +1,36 @@
-export default function PersonalInfo() {
+import React, { useState } from 'react';
+import Input from './InputField';
+
+export default function PersonalInfo({ info, setInfo }) {
 	return (
-		<div className="builder-container">
-			<div className="PersInfo-container">
+		<div className="info-container">
+			<div className="info-header">
 				<h2>Personal Information</h2>
-				<ul>
-					<li className="Name">
-						Name:{' '}
-						<input type="text" name="name" placeholder="Enter your full name" />
-					</li>
-					<li className="Email">
-						Email Address:{' '}
-						<input
-							type="email"
-							name="email"
-							placeholder="Enter your email address"
-						/>
-					</li>
-					<li className="PhoneNum">
-						Phone number:{' '}
-						<input
-							type="number"
-							name="phonenum"
-							placeholder="Enter your phone number"
-						/>
-					</li>
-					<li className="Location">
-						Location:{' '}
-						<input
-							type="text"
-							name="location"
-							placeholder="Enter your location"
-						/>
-					</li>
-				</ul>
 			</div>
+
+			<form>
+				<Input
+					name="Name"
+					value={info.name}
+					onChange={(e) => setInfo({ ...info, name: e.target.value })}
+				/>
+				<Input
+					name="Email"
+					value={info.email}
+					onChange={(e) => setInfo({ ...info, email: e.target.value })}
+				/>
+				<Input
+					name="Phone"
+					type="tel"
+					value={info.phone}
+					onChange={(e) => setInfo({ ...info, phone: e.target.value })}
+				/>
+				<Input
+					name="Address"
+					value={info.address}
+					onChange={(e) => setInfo({ ...info, address: e.target.value })}
+				/>
+			</form>
 		</div>
 	);
 }
