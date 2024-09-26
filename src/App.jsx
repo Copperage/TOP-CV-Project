@@ -8,10 +8,10 @@ import React, { useState } from 'react';
 export default function App() {
 	const example = {
 		personalInfo: {
-			Name: 'Joe Shmoe',
-			Email: 'joeshmoe@mail.co.uk',
-			Phone: '+77 1234 1234 1234',
-			Address: 'London, UK',
+			name: 'Joe Shmoe',
+			email: 'joeshmoe@mail.co.uk',
+			phone: '+77 1234 1234 1234',
+			address: 'London, UK',
 		},
 	};
 

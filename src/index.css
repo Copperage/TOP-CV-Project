@@ -31,7 +31,7 @@ li {
 
 #root {
 	display: grid;
-	grid-template-columns: 0.75fr 1.25fr;
+	grid-template-columns: 0.6fr 1.4fr;
 	grid-template-rows: 0.2fr 1.8fr;
 	gap: 0px 0px;
 	grid-auto-flow: row;
@@ -43,8 +43,9 @@ li {
 header {
 	grid-area: header;
 	width: fit-content;
-	justify-self: center;
-	align-self: center;
+	justify-content: center;
+	align-content: center;
+	margin: 0 auto;
 }
 
 .builder-container {
@@ -63,4 +64,30 @@ header {
 	background-color: hsl(0, 0%, 90%);
 	color: hsl(0, 0%, 0%);
 	border-radius: 5px;
+}
+
+.cv-header {
+	padding: 1em;
+	background-color: hsla(145, 100%, 50%, 0.25);
+	margin-bottom: 1em;
+}
+
+form > div {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1em;
+}
+
+input {
+	height: 1.5em;
+	border-radius: 5px;
+	border: none;
+	background-color: hsla(225, 25%, 25%, 0.5);
+	padding: 0.25em 0.5em;
+	font-size: 0.9em;
+}
+
+input:focus {
+	background-color: hsla(225, 25%, 40%, 0.5);
+	outline: none;
 }
