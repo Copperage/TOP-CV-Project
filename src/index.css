@@ -21,7 +21,7 @@ html {
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 3.5vw;
 	line-height: 1.1;
 }
 
@@ -29,15 +29,17 @@ li {
 	list-style-type: none;
 }
 
-#root {
+.page-container {
 	display: grid;
 	grid-template-columns: 0.6fr 1.4fr;
 	grid-template-rows: 0.2fr 1.8fr;
-	gap: 0px 0px;
+	gap: 1rem;
 	grid-auto-flow: row;
 	grid-template-areas:
 		'header cv-display'
 		'info-container cv-display';
+	margin: 2vh 2vw;
+	height: 96vh;
 }
 
 header {
@@ -51,24 +53,20 @@ header {
 .builder-container {
 	grid-area: info-container;
 	background-color: hsla(225, 25%, 25%, 0.5);
-	border-radius: 25px;
-	height: 70vh;
-	margin: 1rem 0 1rem 2rem;
-	padding: 1.5rem 2rem;
+	border-radius: 10px;
+	padding: 1rem;
 	overflow: scroll;
 }
 
-.CV-Display {
+.cv-display {
 	grid-area: cv-display;
-	margin: 5vh 2.5vw;
-	height: 90vh;
 	background-color: hsl(0, 0%, 90%);
 	color: hsl(0, 0%, 0%);
 	border-radius: 5px;
 }
 
 .cv-header {
-	padding: 1em;
+	padding: 1rem;
 	background-color: hsla(145, 100%, 50%, 0.25);
 	margin-bottom: 1em;
 }
@@ -76,7 +74,7 @@ header {
 form > div {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1em;
+	margin-bottom: 1rem;
 }
 
 input {
@@ -93,6 +91,11 @@ input:focus {
 	outline: none;
 }
 
+.builder-container h2 {
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+
 .info-header,
 .education-header,
 .work-header {
@@ -102,8 +105,12 @@ input:focus {
 }
 
 svg {
+	width: 20px !important;
+	height: 20px !important;
 	opacity: 25%;
 	transition: 0.2s ease-in-out;
+	flex-shrink: 0;
+	vertical-align: middle;
 }
 
 svg:hover {

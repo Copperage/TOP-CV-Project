@@ -19,13 +19,15 @@ export default function App() {
 
 	return (
 		<>
-			<Header />
-			<div className="builder-container">
-				<PersonalInfo info={personalInfo} setInfo={setPersonalInfo} />
-				<EducationInfo />
-				<WorkExpInfo />
+			<div className="page-container">
+				<Header />
+				<div className="builder-container">
+					<PersonalInfo info={personalInfo} setInfo={setPersonalInfo} />
+					<EducationInfo />
+					<WorkExpInfo />
+				</div>
+				<CvDisplay personalInfo={personalInfo} />
 			</div>
-			<CvDisplay personalInfo={personalInfo} />
 		</>
 	);
 }

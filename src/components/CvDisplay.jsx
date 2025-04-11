@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function CvDisplay({ personalInfo }) {
 	return (
-		<div className="CV-Display">
+		<div className="cv-display">
 			<div className="cv-header">
 				<h1 className="cv-name">{personalInfo.name}</h1>
 				<p className="cv-email">{personalInfo.email}</p>
